@@ -1,0 +1,110 @@
+{
+  "groups": [
+    {
+      "name": "doc-converter",
+      "type": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "doc-converter.after-start-process-delay",
+      "type": "java.lang.Long",
+      "description": "Specifies the delay after an attempt to start a LibreOffice process before doing anything else.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": 2000
+    },
+    {
+      "name": "doc-converter.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable Document Converter, which means that LibreOffice instances will be launched.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "doc-converter.host-name",
+      "type": "java.lang.String",
+      "description": "Host name that will be used in the --accept argument when starting a LibreOffice process.  Most of the time, the default will work. But if it doesn't work (unable to connect to the started process), using 'localhost' as the host name instead may work.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": "127.0.0.1"
+    },
+    {
+      "name": "doc-converter.keep-alive-on-shutdown",
+      "type": "java.lang.Boolean",
+      "description": "Indicates whether the LibreOffice processes will be kept alive on shutdown.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "doc-converter.max-tasks-per-process",
+      "type": "java.lang.Integer",
+      "description": "The maximum number of tasks a LibreOffice process will execute before being restarted.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": 200
+    },
+    {
+      "name": "doc-converter.office-home",
+      "type": "java.lang.String",
+      "description": "Represents the LibreOffice home directory. If not set, the LibreOffice installation directory is auto-detected, the most recent version of LibreOffice first.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties"
+    },
+    {
+      "name": "doc-converter.port-numbers",
+      "type": "java.lang.Integer[]",
+      "description": "List of ports used by each Document Converter processing thread. The number of LibreOffice instances is equal to the number of port numbers, since 1 LibreOffice process will be launched for each port number.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": [
+        2002,
+        2003
+      ]
+    },
+    {
+      "name": "doc-converter.process-retry-interval",
+      "type": "java.lang.Long",
+      "description": "Process retry interval (milliseconds). Used for waiting between LibreOffice process call tries (start\/connect\/terminate).",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": 250
+    },
+    {
+      "name": "doc-converter.process-timeout",
+      "type": "java.lang.Long",
+      "description": "Process timeout (milliseconds). Used when trying to execute a LibreOffice process call (start\/connect\/terminate).",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": 120000
+    },
+    {
+      "name": "doc-converter.start-fail-fast",
+      "type": "java.lang.Boolean",
+      "description": "Indicates whether the manager will start fail fast. If set to true, any error while starting the manager will cause the manager to fail immediately.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "doc-converter.task-execution-timeout",
+      "type": "java.lang.Long",
+      "description": "Task execution timeout (milliseconds). The maximum time allowed for a single conversion task.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": 120000
+    },
+    {
+      "name": "doc-converter.task-queue-timeout",
+      "type": "java.lang.Long",
+      "description": "Task queue timeout (milliseconds). The maximum time a task will wait for an available LibreOffice process before timing out.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties",
+      "defaultValue": 30000
+    },
+    {
+      "name": "doc-converter.template-profile-dir",
+      "type": "java.lang.String",
+      "description": "Template profile directory to copy to a created LibreOffice profile directory when a LibreOffice process is launched.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties"
+    },
+    {
+      "name": "doc-converter.working-dir",
+      "type": "java.lang.String",
+      "description": "Directory where temporary LibreOffice profiles will be created. If not set, it defaults to the system temporary directory as specified by the java.io.tmpdir system property.",
+      "sourceType": "com.docconverter.boot.autoconfigure.DocumentConverterProperties"
+    }
+  ],
+  "hints": []
+}

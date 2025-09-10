@@ -1,0 +1,19 @@
+Document Converter 测试文档
+========================
+
+这是一个测试文档，用于验证文档转换功能。
+
+支持的转换:
+• DOC → PDF
+• DOCX → PDF  
+• PDF → DOCX
+• TXT → PDF
+
+测试内容:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+中文内容测试:
+这是中文内容测试，验证字符编码是否正确处理。
+
+结束。

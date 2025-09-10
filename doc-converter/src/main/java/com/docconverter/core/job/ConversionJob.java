@@ -1,0 +1,40 @@
+/*
+ * Document Converter - A local document converter based on LibreOffice
+ * Migrated from JODConverter project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.docconverter.core.job;
+
+import com.docconverter.core.office.OfficeException;
+
+/**
+ * A fully specified conversion that is not yet applied to the converter.
+ * 
+ * <p>This interface represents the final stage of the conversion job configuration
+ * where all source and target parameters have been specified and the job is ready
+ * to be executed.
+ * 
+ * @author Document Converter Team
+ * @since 1.0.0
+ */
+public interface ConversionJob {
+
+    /**
+     * Executes a conversion and blocks until the conversion terminates.
+     *
+     * @throws OfficeException If the conversion failed
+     */
+    void execute() throws OfficeException;
+}

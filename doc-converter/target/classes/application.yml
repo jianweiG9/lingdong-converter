@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+doc-converter:
+  enabled: true
+  # LibreOffice home directory (auto-detected if not specified)
+  # office-home: /usr/lib/libreoffice
+  host-name: 127.0.0.1
+  port-numbers: [2002, 2003]
+  process-timeout: 120000  # 2 minutes
+  process-retry-interval: 250
+  after-start-process-delay: 2000
+  start-fail-fast: false
+  keep-alive-on-shutdown: false
+  task-queue-timeout: 30000  # 30 seconds
+  task-execution-timeout: 120000  # 2 minutes
+  max-tasks-per-process: 200
+
+logging:
+  level:
+    com.docconverter: INFO
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  application:
+    name: document-converter
