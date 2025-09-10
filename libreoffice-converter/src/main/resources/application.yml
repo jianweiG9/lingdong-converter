@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: libreoffice-converter
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# LibreOffice Converter Configuration
+converter:
+  # LibreOffice installation path
+  office-home: /usr/lib/libreoffice
+  # Port numbers for LibreOffice processes
+  port-numbers: [8100, 8101, 8102, 8103, 8104]
+  # Maximum tasks per process
+  max-tasks-per-process: 100
+  # Process timeout in milliseconds
+  process-timeout: 120000
+  # Retry timeout in milliseconds
+  retry-timeout: 30000
+  # Kill existing processes on startup
+  kill-existing-process: true
+
+# Logging configuration
+logging:
+  level:
+    com.example.converter: INFO
+    org.springframework: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# SpringDoc OpenAPI configuration
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+  info:
+    title: LibreOffice Converter API
+    description: Document conversion service using LibreOffice
+    version: 1.0.0
+    contact:
+      name: LibreOffice Converter Team
+      email: support@example.com

@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "converter",
+      "type": "com.example.converter.config.ConverterProperties",
+      "sourceType": "com.example.converter.config.ConverterProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "converter.kill-existing-process",
+      "type": "java.lang.Boolean",
+      "description": "Whether to kill existing processes on startup.",
+      "sourceType": "com.example.converter.config.ConverterProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "converter.max-tasks-per-process",
+      "type": "java.lang.Integer",
+      "description": "Maximum number of tasks per process.",
+      "sourceType": "com.example.converter.config.ConverterProperties",
+      "defaultValue": 100
+    },
+    {
+      "name": "converter.office-home",
+      "type": "java.lang.String",
+      "description": "LibreOffice installation home directory path.",
+      "sourceType": "com.example.converter.config.ConverterProperties",
+      "defaultValue": "\/usr\/lib\/libreoffice"
+    },
+    {
+      "name": "converter.port-numbers",
+      "type": "java.lang.Integer[]",
+      "description": "Port numbers for LibreOffice processes.",
+      "sourceType": "com.example.converter.config.ConverterProperties",
+      "defaultValue": [
+        8100,
+        8101,
+        8102,
+        8103,
+        8104
+      ]
+    },
+    {
+      "name": "converter.process-timeout",
+      "type": "java.lang.Long",
+      "description": "Process timeout in milliseconds.",
+      "sourceType": "com.example.converter.config.ConverterProperties",
+      "defaultValue": 120000
+    },
+    {
+      "name": "converter.retry-timeout",
+      "type": "java.lang.Long",
+      "description": "Retry timeout in milliseconds.",
+      "sourceType": "com.example.converter.config.ConverterProperties",
+      "defaultValue": 30000
+    }
+  ],
+  "hints": []
+}

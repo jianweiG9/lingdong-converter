@@ -1,0 +1,7 @@
+/workspace/libreoffice-converter/src/main/java/com/example/converter/controller/ConversionController.java
+/workspace/libreoffice-converter/src/main/java/com/example/converter/core/DocumentFormat.java
+/workspace/libreoffice-converter/src/main/java/com/example/converter/core/LibreOfficeManager.java
+/workspace/libreoffice-converter/src/main/java/com/example/converter/core/ConversionException.java
+/workspace/libreoffice-converter/src/main/java/com/example/converter/config/ConverterProperties.java
+/workspace/libreoffice-converter/src/main/java/com/example/converter/core/DocumentConverter.java
+/workspace/libreoffice-converter/src/main/java/com/example/converter/LibreOfficeConverterApplication.java

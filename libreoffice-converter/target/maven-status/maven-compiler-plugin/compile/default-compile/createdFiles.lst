@@ -1,0 +1,9 @@
+META-INF/spring-configuration-metadata.json
+com/example/converter/LibreOfficeConverterApplication.class
+com/example/converter/core/DocumentFormat.class
+com/example/converter/core/DocumentConverter.class
+com/example/converter/core/LibreOfficeManager.class
+com/example/converter/controller/ConversionController$ConversionRequest.class
+com/example/converter/core/ConversionException.class
+com/example/converter/config/ConverterProperties.class
+com/example/converter/controller/ConversionController.class
